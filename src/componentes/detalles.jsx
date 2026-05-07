@@ -1,8 +1,8 @@
-function detalles({ pelicula }) {
+function Detalles({ pelicula }) {
   if (!pelicula) {
     return (
       <div>
-        <p>Por favor seleccione una pelicula .</p>
+        <p>Por favor seleccione una película.</p>
       </div>
     )
   }
@@ -28,4 +28,4 @@ function detalles({ pelicula }) {
   )
 }
 
-export default detalles
+export default Detalles

@@ -1,6 +1,6 @@
 import MovieCard from "./tarjetaPelicula"
 
-function listaPelicula({ peliculas, onSeleccionar }) {
+function ListaPelicula({ peliculas, onSeleccionar }) {
   return (
     <div  className="movie-grid">
       {peliculas.map((peli) => (
@@ -13,4 +13,4 @@ function listaPelicula({ peliculas, onSeleccionar }) {
     </div>
   )
 }
-export default listaPelicula
+export default ListaPelicula

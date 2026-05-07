@@ -1,4 +1,4 @@
-function busqueda({ busqueda, setBusqueda }) {
+function Busqueda({ busqueda, setBusqueda }) {
   return (
     <input className="search-input"
       type="text"
@@ -9,4 +9,4 @@ function busqueda({ busqueda, setBusqueda }) {
   )
 }
 
-export default busqueda
+export default Busqueda

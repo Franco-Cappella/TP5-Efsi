@@ -1,12 +1,12 @@
 /* Módulo OMDBWrapper*/
 import axios from "axios";
-const APIKEY = "8340286a"; // MI APIKEY (TOTOSO)
-const BASE_URL = "http://www.omdbapi.com/?apikey=" + APIKEY
+const APIKEY = "b153ef22"; // MI APIKEY (Tobi)
+const BASE_URL = "http://www.omdbapi.com/"
     
 export async function buscarPeliculas(titulo) {
     const respuesta = await axios.get(BASE_URL, {
         params: {
-            apikey: API_KEY,
+            apikey: APIKEY,
             s: titulo
         }
     })
@@ -17,7 +17,7 @@ export async function buscarPeliculas(titulo) {
 export async function buscarDetalle(id) {
     const respuesta = await axios.get(BASE_URL, {
         params: {
-            apikey: API_KEY,
+            apikey: APIKEY,
             i: id
         }
     })

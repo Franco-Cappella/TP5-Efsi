@@ -5,7 +5,7 @@ import ListaPelicula from "./componentes/listaPelicula"
 import Detalles from "./componentes/detalles"
 import Loader from "./componentes/loader"
 import MensajeDeError from "./componentes/mensajeDeError"
-import { buscarPeliculas, buscarDetalle } from "./services/API"
+import { buscarPeliculas, buscarDetalle } from "./servicios/api"
 import "./App.css"
 
 function App() {

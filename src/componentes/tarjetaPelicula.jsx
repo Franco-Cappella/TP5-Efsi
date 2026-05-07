@@ -1,6 +1,6 @@
-function tarjeta(pelicula,selecionar)
+function MovieCard({ pelicula, onSeleccionar })
 {
- 
+
   return (
     <div className="movie-card">
       <img className="movie-poster" src={pelicula.Poster} alt={pelicula.Title} />
@@ -8,11 +8,11 @@ function tarjeta(pelicula,selecionar)
       <p className="movie-meta">Año: {pelicula.Year}</p>
       <p className="movie-meta">Tipo: {pelicula.Type}</p>
 
-      <button className="detail-button" onClick={() => selecionar(pelicula.imdbID)}>
+      <button className="detail-button" onClick={() => onSeleccionar(pelicula.imdbID)}>
         Ver detalle
       </button>
     </div>
   )
 }
 
-export default tarjeta
+export default MovieCard
