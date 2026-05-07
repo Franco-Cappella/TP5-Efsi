@@ -1,0 +1,258 @@
+:root {
+  --fondo-principal: #141414;
+  --fondo-tarjeta: #2b2b2b;
+  --texto-principal: #ffffff;
+  --texto-secundario: #b3b3b3;
+  --color-acento: #e50914; 
+  --color-acento-hover: #f40612;
+  --radio-borde: 8px;
+  --transicion: all 0.3s ease;
+}
+
+body {
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.titulo {
+  font-size: 2.5rem;
+  color: var(--texto-principal);
+  margin-bottom: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.search-form {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radio-borde);
+  background-color: var(--fondo-tarjeta);
+  color: var(--texto-principal);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--texto-secundario);
+}
+
+.search-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.search-button:hover {
+  background-color: var(--color-acento-hover);
+  transform: scale(1.05);
+}
+
+
+.cargando {
+  font-size: 1.5rem;
+  color: var(--texto-secundario);
+  text-align: center;
+  margin: 2rem 0;
+  animation: titilar 1.5s infinite;
+}
+
+@keyframes titilar {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.error-message {
+  color: var(--color-acento);
+  background-color: rgba(229, 9, 20, 0.1);
+  padding: 1rem 2rem;
+  border-radius: var(--radio-borde);
+  border: 1px solid var(--color-acento);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+
+.movie-card {
+  background-color: var(--fondo-tarjeta);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transicion);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.movie-title {
+  font-size: 1.1rem;
+  margin: 1rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.movie-meta {
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  margin: 0.2rem 1rem;
+  text-align: center;
+}
+
+.detail-button {
+  margin: 1rem;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--texto-principal);
+  border: 1px solid var(--texto-secundario);
+  border-radius: var(--radio-borde);
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.detail-button:hover {
+  background-color: var(--texto-principal);
+  color: var(--fondo-principal);
+}
+
+
+.movie-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: var(--fondo-tarjeta);
+  padding: 2rem;
+  border-radius: var(--radio-borde);
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+
+.movie-detail-poster {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radio-borde);
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.movie-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-detail-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-acento);
+}
+
+.movie-detail-content p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+/* Updated class names to match Spanish naming conventions */
+
+.detallesPelicula {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: var(--fondo-tarjeta);
+  padding: 2rem;
+  border-radius: var(--radio-borde);
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+}
+
+.detallesPelicula-poster {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: var(--radio-borde);
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.detallesPelicula-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--texto-principal);
+}
+
+.cargando {
+  font-size: 1.5rem;
+  color: var(--texto-secundario);
+  text-align: center;
+  margin: 2rem 0;
+  animation: titilar 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+  .detallesPelicula {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .detallesPelicula-poster {
+    max-width: 100%;
+  }
+}

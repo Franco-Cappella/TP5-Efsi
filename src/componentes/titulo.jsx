@@ -1,6 +1,6 @@
 function Titulo({ texto }){
     return(
-        <h1 className="app-title">{texto}</h1>
+        <h1 className="titulo">{texto}</h1>
     )
 }
 

@@ -76,7 +76,7 @@ function App() {
   return (
     <div className="app-container">
 
-      <Titulo texto="Buscador de películas y series" />
+      <Titulo texto="Buscador de películas " />
 
       <form className="search-form" onSubmit={manejarSubmit}>
         <Busqueda

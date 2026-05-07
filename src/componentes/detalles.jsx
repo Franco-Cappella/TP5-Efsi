@@ -8,10 +8,10 @@ function Detalles({ pelicula }) {
   }
 
   return (
-     <div className="movie-detail">
-      <img className="movie-detail-poster" src={pelicula.Poster} alt={pelicula.Title} />
+     <div className="detallesPelicula">
+      <img className="detallesPelicula-poster" src={pelicula.Poster} alt={pelicula.Title} />
 
-      <div className="movie-detail-content">
+      <div className="detallesPelicula-info">
       <h2>{pelicula.Title}</h2>
 
       <p>Año: {pelicula.Year}</p>
